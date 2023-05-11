@@ -1,7 +1,7 @@
 import { Layer } from "../../models/Layer";
 import { CakeLayer } from "../CakeLayer/CakeLayer";
 
-export function LayerBuilder(prop: {layers: Layer[]}) {
+export function LayerBuilder(prop: {layers: Layer[], onDelete: (layer: Layer) => void}) {
     return (
         <div>
             {
