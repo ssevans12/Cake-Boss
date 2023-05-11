@@ -1,17 +1,39 @@
-export function LayerForm() {
+import { Layer } from "../../models/Layer";
+import { useState } from "react";
+
+
+export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () => void}) {
+
+    const [height, setHeight] = useState('');
+    const [width, setWidth] = useState('');
+    const [color, setColor] = useState('');
+
+    function saveLayer(e: any) {
+        const newLayer = {
+            height: +height,
+            width: +width,
+            color: color
+        }
+
+        e.preventDefault()
+
+        props.onAdd(newLayer)
+    }
+
     return (
         <div>
-            <form>
+            <form onSubmit={saveLayer}>
+
                <label>Height</label>
-               <input type="number"></input>
+               <input value={height} onChange={e => setHeight(e.target.value)} type="number"></input>
 
                <label>Width</label>
-               <input type="number"></input>
+               <input value={width} onChange={e => setWidth(e.target.value)} type="number"></input>
 
                <label>Color</label>
                <option value=""></option>
-               <button>Save</button>
-               <button>Cancel</button>
+               <button onClick={saveLayer}>Save</button>
+               <button onClick={() => props.onClose()}>Cancel</button>
             </form>
         </div>
     )

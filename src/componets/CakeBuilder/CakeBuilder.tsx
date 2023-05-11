@@ -14,7 +14,7 @@ export function CakeBuilder() {
       
         <div>
             <LayerAdd></LayerAdd>
-            <LayerBuilder layers={layers}></LayerBuilder>
+            <LayerBuilder layers={layers} onDelete={() => {}}></LayerBuilder>
         </div>
     )
 }
