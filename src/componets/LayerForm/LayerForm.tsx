@@ -31,7 +31,7 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
 
                <label>Color</label>
                <option value=""></option>
-               <button onClick={saveLayer}>Save</button>
+               <button>Save</button>
                <button onClick={() => props.onClose()}>Cancel</button>
             </form>
         </div>
