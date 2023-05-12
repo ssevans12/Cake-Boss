@@ -7,7 +7,7 @@ export function LayerAdd() {
 
         return (
             <div>
-                <button>Add</button>
+                <button onClick={() => {}}>Add</button>
             </div>
         )
     }

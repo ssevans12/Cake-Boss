@@ -8,21 +8,20 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
     const [width, setWidth] = useState('');
     const [color, setColor] = useState('');
 
-    function saveLayer(e: any) {
-        const newLayer = {
-            height: +height,
-            width: +width,
-            color: color
-        }
 
-        e.preventDefault()
-
-        props.onAdd(newLayer)
-    }
 
     return (
         <div>
-            <form onSubmit={saveLayer}>
+            <form onSubmit={e => {e.preventDefault();
+            const newLayer = {
+                height: +height,
+                width: +width,
+                color: color
+            }
+
+            props.onAdd(newLayer)
+        }}
+            >
 
                <label>Height</label>
                <input value={height} onChange={e => setHeight(e.target.value)} type="number"></input>
