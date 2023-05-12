@@ -8,12 +8,20 @@ import { Layer } from "../../models/Layer";
 
 export function CakeBuilder() {
 
-    const [layers, setLayers] = useState<Layer[]>([])
+    const [layers, setLayers] = useState<Layer[]>([
+        {
+            height: 4,
+            width: 7,
+            color: "yellow"
+          }
+    ])
+
+
     
     return (
       
         <div>
-            <LayerAdd></LayerAdd>
+            <LayerAdd onAdd={newLayer => setLayers([...layers, newLayer])}></LayerAdd>
             <LayerBuilder layers={layers} onDelete={() => {}}></LayerBuilder>
         </div>
     )

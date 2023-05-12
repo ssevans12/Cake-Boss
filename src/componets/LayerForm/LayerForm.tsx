@@ -30,7 +30,11 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
                <input value={width} onChange={e => setWidth(e.target.value)} type="number"></input>
 
                <label>Color</label>
-               <option value=""></option>
+               <select name="Color">
+               <option value="Yellow">Yellow</option>
+               <option value="Pink">Pink</option>
+               <option value="Chocolate">Chocolate</option>
+               </select>
                <button>Save</button>
                <button onClick={() => props.onClose()}>Cancel</button>
             </form>
