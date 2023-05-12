@@ -19,6 +19,7 @@ export function CakeBoss() {
     <div>
         <CakeBuilder></CakeBuilder>
         <Cake></Cake>
+        
     </div>
     )
 }
