@@ -3,18 +3,13 @@ import { LayerAdd } from "../LayerAdd/LayerAdd";
 import { LayerBuilder } from "../LayerBuilder/LayerBuilder";
 import { LayerForm } from "../LayerForm/LayerForm";
 import { Layer } from "../../models/Layer";
+import "./CakeBuilder.css";
 
 
 
 export function CakeBuilder() {
 
-    const [layers, setLayers] = useState<Layer[]>([
-        {
-            height: 4,
-            width: 7,
-            color: "yellow"
-          }
-    ])
+    const [layers, setLayers] = useState<Layer[]>([])
 
 
     

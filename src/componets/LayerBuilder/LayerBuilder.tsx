@@ -8,7 +8,7 @@ export function LayerBuilder(prop: {layers: Layer[], onDelete: (layer: Layer) =>
                 prop.layers.map(layer => <CakeLayer layer={layer}></CakeLayer>)
             }
             
-            <button>Delete</button>
+            
         </div>
     )
 }
