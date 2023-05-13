@@ -1,22 +1,21 @@
 import { useState } from "react";
 import { LayerAdd } from "../LayerAdd/LayerAdd";
 import { LayerBuilder } from "../LayerBuilder/LayerBuilder";
-import { LayerForm } from "../LayerForm/LayerForm";
 import { Layer } from "../../models/Layer";
 import "./CakeBuilder.css";
 
 
 
-export function CakeBuilder() {
-
+export function CakeBuilder(props: {onAdd: (newLayer: Layer) => void}) {
+//is the informational side of the app
     const [layers, setLayers] = useState<Layer[]>([])
 
 
     
     return (
       
-        <div>
-            <LayerAdd onAdd={newLayer => setLayers([...layers, newLayer])}></LayerAdd>
+        <div className="cakeBuilder">
+            <LayerAdd onAdd={(newLayer: Layer) => {props.onAdd(newLayer)}}></LayerAdd>
             <LayerBuilder layers={layers} onDelete={() => {}}></LayerBuilder>
         </div>
     )

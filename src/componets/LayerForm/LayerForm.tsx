@@ -7,10 +7,12 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
     const [height, setHeight] = useState('');
     const [width, setWidth] = useState('');
     const [color, setColor] = useState('');
+    const [yellow, setYellow] = useState('');
 
 
 
     return (
+        //includes inputs to customize a layer. Has a save and cancel buttons. When cancel is clicked, LayerAdd just hides the form.
         <div>
             <form onSubmit={e => {e.preventDefault();
             const newLayer = {
@@ -30,8 +32,8 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
                <input value={width} onChange={e => setWidth(e.target.value)} type="number"></input>
 
                <label>Color</label>
-               <select name="Color">
-               <option value="Yellow">Yellow</option>
+               <select id="Color">
+               <option value={yellow} onChange={e => setYellow}>Yellow</option>
                <option value="Pink">Pink</option>
                <option value="Chocolate">Chocolate</option>
                </select>

@@ -5,7 +5,7 @@ import { LayerForm } from "../LayerForm/LayerForm";
 
 
 export function LayerAdd(props: {onAdd: (newLayer: Layer) => void}) {
-
+//a button that, when clicked, displays a LayerForm to add a layer
         return (
             <div>
                 <button onClick={() => {}}>Add</button>
