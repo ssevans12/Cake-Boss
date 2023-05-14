@@ -1,6 +1,10 @@
 .cakeDisplay {
-    height: 50%;
-    width: 50%;
+    width: 100vw;
     border: solid 3px black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding-top: 20px;
 }
+
 
