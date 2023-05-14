@@ -37,6 +37,7 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
 
                <label>Color</label>
                <select id="Color" value={color} onChange={handleChange}>
+            <option>Select a flavor</option>
                <option value={yellow} onClick={() => setYellow}>Yellow</option>
                <option value={pink} onClick={() => setPink}>Pink</option>
                <option value={chocolate} onClick={() => setChocolate}>Chocolate</option>

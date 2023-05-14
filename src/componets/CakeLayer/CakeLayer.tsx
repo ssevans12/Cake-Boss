@@ -7,9 +7,6 @@ export function CakeLayer(props: {layer: Layer}) {
     return (
         <div>
             <div className="cakelayer" style={{width: props.layer.width, height: props.layer.height, backgroundColor: props.layer.color}}>
-            {/* Height: {props.layer.height}
-            Width: {props.layer.width}
-            Color: {props.layer.color} */}
             </div>
 
 
