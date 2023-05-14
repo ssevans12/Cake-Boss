@@ -5,11 +5,13 @@ export function LayerBuilder(prop: {layers: Layer[], onDelete: (layer: Layer) =>
     return (
 
     //displays information about a layer. Includes a delete button
-        <div>
+        <div className="layerBuilder">
             {
                 prop.layers.map(layer => <CakeLayer layer={layer}></CakeLayer>)
             }
-            
+            <div className="cakeInfo">
+            <p></p>
+            </div>
             <button>Delete</button>
         </div>
     )
