@@ -7,8 +7,12 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
     const [height, setHeight] = useState('');
     const [width, setWidth] = useState('');
     const [color, setColor] = useState('');
-    const [yellow, setYellow] = useState('');
-
+    const [yellow, setYellow] = useState('yellow');
+    const [pink, setPink] = useState('pink')
+    const [chocolate, setChocolate] = useState('chocolate')
+    const handleChange = (event : any) => {
+        setColor(event.target.value);
+    }
 
 
     return (
@@ -32,10 +36,10 @@ export function LayerForm(props: {onAdd: (newLayer: Layer) => void, onClose: () 
                <input value={width} onChange={e => setWidth(e.target.value)} type="number"></input>
 
                <label>Color</label>
-               <select id="Color">
-               <option value={yellow} onChange={e => setYellow}>Yellow</option>
-               <option value="Pink">Pink</option>
-               <option value="Chocolate">Chocolate</option>
+               <select id="Color" value={color} onChange={handleChange}>
+               <option value={yellow} onClick={() => setYellow}>Yellow</option>
+               <option value={pink} onClick={() => setPink}>Pink</option>
+               <option value={chocolate} onClick={() => setChocolate}>Chocolate</option>
                </select>
                <button>Save</button>
                <button onClick={() => props.onClose()}>Cancel</button>
