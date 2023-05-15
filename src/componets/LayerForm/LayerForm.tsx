@@ -26,24 +26,25 @@ export function LayerForm(props: { onAdd: (newLayer: Layer) => void, onClose: ()
                     color: color
                 }
 
-                props.onAdd(newLayer)
+                props.onAdd(newLayer);
+                props.onClose()
             }}
             >
 
                 <label>Height</label>
-                <input value={height} onChange={e => setHeight(e.target.value)} type="number" min="0.5" max="10" step=".5"></input>
+                <input value={height} onChange={e => setHeight(e.target.value)} type="number" min="0.5" max="10" step=".5" required></input>
 
                 <label>Width</label>
-                <input value={width} onChange={e => setWidth(e.target.value)} type="number" min="1" max="10"></input>
+                <input value={width} onChange={e => setWidth(e.target.value)} type="number" min="1" max="10" required></input>
 
                 <label>Color</label>
-                <select id="Color" value={color} onChange={handleChange}>
-                    <option>Select a flavor</option>
+                <select id="Color" value={color} onChange={handleChange} required>
+                    <option value="">Select a flavor</option>
                     <option value={yellow} onClick={() => setYellow}>Yellow</option>
                     <option value={pink} onClick={() => setPink}>Pink</option>
                     <option value={chocolate} onClick={() => setChocolate}>Chocolate</option>
                 </select>
-                <button>Save</button>
+                <button >Save</button>
                 <button onClick={() => props.onClose()}>Cancel</button>
             </form>
         </div>
