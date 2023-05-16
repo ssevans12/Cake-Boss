@@ -5,7 +5,7 @@ import { Layer } from "../../models/Layer";
 import "./CakeBuilder.css";
 
 
-export function CakeBuilder(props: { onAdd: (newLayer: Layer) => void}, onDelete: (layer: Layer) => void) { 
+export function CakeBuilder(props: { layer: Layer[], onAdd: (newLayer: Layer) => void}, onDelete: (layer: Layer) => void) { 
 //is the informational side of the app
     
     const [layers, setLayers] = useState<Layer[]>([]);
@@ -16,7 +16,9 @@ export function CakeBuilder(props: { onAdd: (newLayer: Layer) => void}, onDelete
       
         <div className="cakeBuilder">
             <LayerAdd onAdd={(newLayer: Layer) => {props.onAdd(newLayer)}}></LayerAdd>
-            <LayerBuilder layers={layers} onDelete={() => {}}></LayerBuilder>
+            {
+                props.layer.map(layer => <LayerBuilder layer={layer} onDelete={() => {}}></LayerBuilder>)
+            }
         </div>
     )
 }

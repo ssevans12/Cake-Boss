@@ -17,9 +17,10 @@ const customStyles = {
 Modal.setAppElement('#root')
 
 
-export function LayerAdd(props: {onAdd: (newLayer: Layer) => void} ) {
+export function LayerAdd(props: { onAdd: (newLayer: Layer) => void}) {
 //a button that, when clicked, displays a LayerForm to add a layer
     const [modalOpen, setIsOpen] = useState(false);
+    const [layer, setLayer] = useState<Layer[]>([])
 
     function closeModal() {
         setIsOpen(false)

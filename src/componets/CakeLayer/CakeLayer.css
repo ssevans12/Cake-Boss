@@ -1,6 +1,8 @@
 .cakelayer {
     border: solid 1px black;
-    border-radius: 25% / 25px;
+    border-radius: 50% / 25px;
+    position: relative;
+    overflow: hidden;
 }
 
 .pink {
