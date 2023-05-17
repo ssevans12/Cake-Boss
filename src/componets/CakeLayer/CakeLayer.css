@@ -5,6 +5,16 @@
     overflow: hidden;
 }
 
+/* .top {
+    border-bottom: solid 2px grey;
+    border-radius: 50%;
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+  left: 0;
+  right: 0;
+} */
+
 .pink {
     background-color: pink;
 }

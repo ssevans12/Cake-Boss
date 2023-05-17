@@ -28,7 +28,7 @@ export function LayerAdd(props: { onAdd: (newLayer: Layer) => void}) {
 
     return (
             <div>
-                <button onClick={() => setIsOpen(true)}>Add</button>
+                <button onClick={() => setIsOpen(true)} style={{width: 100 + "%"}}>Add</button>
                 
                 <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles}>
                     <LayerForm onAdd={(newLayer: Layer) => {props.onAdd(newLayer)}} onClose={closeModal}></LayerForm>

@@ -10,7 +10,10 @@ export function CakeBuilder(props: { layer: Layer[], onAdd: (newLayer: Layer) =>
     
     const [layers, setLayers] = useState<Layer[]>([]);
     
-   
+    function handleDelete(layer: number) {
+        setLayers(layers => 
+            [...layers.slice(0, layer), ...layers.slice(layer + 1)])
+    }
     
     return (
       
