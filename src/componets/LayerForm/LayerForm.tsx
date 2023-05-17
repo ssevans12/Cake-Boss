@@ -23,7 +23,8 @@ export function LayerForm(props: { onAdd: (newLayer: Layer) => void, onClose: ()
                 const newLayer = {
                     height: +height,
                     width: +width,
-                    color: color
+                    color: color,
+    
                 }
 
                 props.onAdd(newLayer);
