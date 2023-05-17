@@ -13,7 +13,7 @@ function App() {
     <div className="App">
 
       <Cake layers={cake}></Cake>
-      <CakeBuilder layer={cake} onAdd={newLayer => setCake([newLayer, ...cake])} onDelete={() => {}}></CakeBuilder>
+      <CakeBuilder layer={cake} onAdd={newLayer => setCake([newLayer, ...cake])} onDelete={(i) => {setCake((prev) =>  [...cake.slice(0, i), ...prev.slice(i + 1)])}}></CakeBuilder>
     </div>
   );
 }

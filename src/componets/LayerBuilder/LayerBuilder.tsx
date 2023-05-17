@@ -6,7 +6,7 @@ import { LayerAdd } from "../LayerAdd/LayerAdd";
 import { LayerForm } from "../LayerForm/LayerForm";
 import "./LayerBuilder.css"
 
-export function LayerBuilder(prop: { layer: Layer, onDelete: (layer: Layer) => void}) {
+export function LayerBuilder(prop: { layer: Layer, onDelete: () => void}) {
     const [layers, setLayers] = useState<Layer[]>([]);
     
 
@@ -19,7 +19,7 @@ export function LayerBuilder(prop: { layer: Layer, onDelete: (layer: Layer) => v
             <p>Width: {prop.layer.width}</p>
             <p>Color: {prop.layer.color}</p>
             
-            <button onClick={() => prop.onDelete(prop.layer)}>Delete</button>
+            <button onClick={() => prop.onDelete()}>Delete</button>
             
             
         </div>

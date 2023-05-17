@@ -10,6 +10,7 @@ export function Cake(prop: {layers: Layer[]}) {
     return (
       
         <div className="cakeDisplay">
+            <div className="plate"></div>
             <div className="layer">
             {
                 prop.layers.map(layer => <CakeLayer layer={layer}></CakeLayer>)
