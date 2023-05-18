@@ -9,7 +9,7 @@
     justify-content: center;
     flex-direction: column-reverse;
     align-content: center;
-    
+    flex-wrap: wrap;
     
 }
 .plate-top {
@@ -29,6 +29,7 @@
     border-radius: 50% / 25px;
     position: relative;
     margin: -35px 0;
+    
     
 }
 

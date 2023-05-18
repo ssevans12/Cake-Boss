@@ -10,12 +10,12 @@ export function Cake(prop: {layers: Layer[]}) {
     return (
       
         <div className="cakeDisplay">
-            <div className="plate"><div className="plate-top"></div></div>
+            
             
             <div className="layer">
             {
                 prop.layers.map((layer, i) => <CakeLayer key={i} layer={layer}index={100-i} ></CakeLayer>)
-            }
+            }<div className="plate"><div className="plate-top"></div></div>
             </div>
             
         </div>
