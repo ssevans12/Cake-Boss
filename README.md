@@ -6,7 +6,8 @@
 A delicious web app from [Sara](https://github.com/ssevans12), [Bailey](https://github.com/baileycytackilewis), and [Joan](https://github.com/Joan-Wolf)
 
 ![Cake Boss App](./public/cake1.png)
-##Features
+
+## Features
 
 - Allows the user to choose the height, width, and flavor of each layer of the cake :cupcake:
 - Users can add as many layers as their hearts desire :cake:
