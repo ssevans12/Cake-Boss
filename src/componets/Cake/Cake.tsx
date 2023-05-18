@@ -13,7 +13,8 @@ export function Cake(prop: {layers: Layer[]}) {
             <div className="plate"></div>
             <div className="layer">
             {
-                prop.layers.map((layer, i) => <CakeLayer layer={layer} index={100-i}></CakeLayer>)
+               
+                prop.layers.map((layer, i) => <CakeLayer key={i} layer={layer}></CakeLayer>)
             }
             </div>
         </div>
