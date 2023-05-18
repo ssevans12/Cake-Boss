@@ -16,7 +16,7 @@ export function LayerBuilder(prop: { layer: Layer, onDelete: () => void}) {
         <div className="layerBuilder">
             
             <p>Height: {prop.layer.height}</p>
-            <p>Width: {prop.layer.width}</p>
+            <p>Width: {prop.layer.width}</p> 
             <p>Color: {prop.layer.color}</p>
             
             <button onClick={() => prop.onDelete()}>Delete</button>

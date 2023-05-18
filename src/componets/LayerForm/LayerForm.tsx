@@ -7,9 +7,9 @@ export function LayerForm(props: { onAdd: (newLayer: Layer) => void, onClose: ()
     const [height, setHeight] = useState('');
     const [width, setWidth] = useState('');
     const [color, setColor] = useState('');
-    const [yellow, setYellow] = useState('yellow');
-    const [pink, setPink] = useState('pink')
-    const [chocolate, setChocolate] = useState('chocolate')
+    const [yellow, setYellow] = useState('Yellow');
+    const [pink, setPink] = useState('Pink')
+    const [chocolate, setChocolate] = useState('Chocolate')
     const handleChange = (event: any) => {
         setColor(event.target.value);
     }
