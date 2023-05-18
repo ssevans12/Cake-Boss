@@ -1,4 +1,4 @@
-#Cake Boss :cake:
+# Cake Boss :cake:
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ssevans12/Cake-Boss)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ssevans12/Cake-Boss)
@@ -14,6 +14,6 @@ A delicious web app from [Sara](https://github.com/ssevans12), [Bailey](https://
 
 ![Cake Boss App](./public/cake2.png)
 
-###Technologies used
+### Technologies used
 
 Cake Boss is built with React
