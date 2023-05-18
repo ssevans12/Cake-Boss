@@ -32,21 +32,21 @@ export function LayerForm(props: { onAdd: (newLayer: Layer) => void, onClose: ()
             }}
             >
 
-                <label>Height</label>
-                <input value={height} onChange={e => setHeight(e.target.value)} type="number" min="0.5" max="10" step=".5" required></input>
+                <label>Height: </label>
+                <input style={{margin: 5 +"px"}} value={height} onChange={e => setHeight(e.target.value)} type="number" min="0.5" max="10" step=".5" required></input>
 
-                <label>Width</label>
-                <input value={width} onChange={e => setWidth(e.target.value)} type="number" min="1" max="10" required></input>
+                <label>Width: </label>
+                <input style={{margin: 5 +"px"}} value={width} onChange={e => setWidth(e.target.value)} type="number" min="1" max="10" required></input>
 
-                <label>Color</label>
-                <select id="Color" value={color} onChange={handleChange} required>
-                    <option value="">Select a flavor</option>
+                <label>Color: </label>
+                <select style={{margin: 5 +"px"}} id="Color" value={color} onChange={handleChange} required>
+                    <option value="">Select a color</option>
                     <option value={yellow} onClick={() => setYellow}>Yellow</option>
                     <option value={pink} onClick={() => setPink}>Pink</option>
                     <option value={chocolate} onClick={() => setChocolate}>Chocolate</option>
                 </select>
-                <button >Save</button>
-                <button onClick={() => props.onClose()}>Cancel</button>
+                <button style={{padding: 5 + "px", width: 70+"px", margin: 5 + "px"}}>Save</button>
+                <button style={{padding: 5 + "px", width: 70+"px", margin: 5 + "px"}} onClick={() => props.onClose()}>Cancel</button>
             </form>
         </div>
     )

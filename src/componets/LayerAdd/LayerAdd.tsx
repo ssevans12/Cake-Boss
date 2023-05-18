@@ -11,6 +11,8 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        padding: "40px"
+        
     },
     overlay: {zIndex: 1000}
 };
@@ -29,7 +31,7 @@ export function LayerAdd(props: { onAdd: (newLayer: Layer) => void}) {
 
     return (
             <div>
-                <button onClick={() => setIsOpen(true)} style={{width: 100 + "%"}}>Add</button>
+                <button onClick={() => setIsOpen(true)} style={{width: 100 + "%", backgroundColor: "pink", padding: 7 + "px"}}>Add</button>
                 
                 <Modal isOpen={modalOpen} onRequestClose={closeModal} style={customStyles}>
                     <LayerForm onAdd={(newLayer: Layer) => {props.onAdd(newLayer)}} onClose={closeModal}></LayerForm>

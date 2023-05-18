@@ -1,7 +1,11 @@
 .layerBuilder {
     border: 1px solid black;
     margin: 5px;
-    
     display: flex;
     justify-content: space-between;
+    padding-left: 10px ;
+}
+
+button {
+    background-color: pink;
 }

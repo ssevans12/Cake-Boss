@@ -1,17 +1,19 @@
 .cakelayer {
-    border: solid 1px black;
+    /* border: solid 1px black; */
+    border-top: none;
     border-radius: 50% / 25px;
     position: relative;
     margin: -35px 0;
-    
+    box-shadow: 0 0 10px grey;
 }
 
 .top {
-    border-bottom: solid 2px grey;
+    border: solid 1px grey;
     border-radius: 50%;
     background-color: inherit;
     position: absolute;
-    height: 50px;
+    height: 40px;
+    
 }
 
 .pink {

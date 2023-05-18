@@ -1,5 +1,7 @@
 .cakeBuilder {
     height: 500px;
     width: 50%;
-    border: solid 3px black;
+    border: solid 1px black;
+    margin: 30px;
+    background-color: white;
 }

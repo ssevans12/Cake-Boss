@@ -7,7 +7,7 @@ export function CakeLayer(props: {layer: Layer, index: number}) {
     return (
         <div>
             <div className="cakelayer" style={{zIndex: props.index, width: props.layer.width * 30 + "px", height: props.layer.height * 20 + "px", backgroundColor: props.layer.color, marginLeft: "auto", marginRight: "auto"}}>
-             <div className="top" style={{width: props.layer.width * 30 + "px"}}></div>
+             <div className="top" style={{width: props.layer.width * 30 - 2 + "px"}}></div>
              </div>
            
         </div>
